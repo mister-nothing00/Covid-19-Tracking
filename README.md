@@ -25,7 +25,13 @@ Per eseguire l'applicazione in locale, segui questi passaggi:
    ```bash
    git clone https://github.com/mister-nothing00/Covid-19-Tracking.git
 
+2. **Passaggio alla cartella**:
+
 cd nome_progetto
+
+3. **Istallazione dipendenze**:
+
 npm install
 
+4. **Avvio del progetto**:
 npm run dev
