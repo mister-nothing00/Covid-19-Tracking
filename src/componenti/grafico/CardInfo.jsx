@@ -14,7 +14,7 @@ import Comparazione from "./Comparazione";
 
 export default function CardInfo({ date, region }) {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ export default function CardInfo({ date, region }) {
         const response = await axios.get(
           `https://covid-api.com/api/reports?date=${date}&region_name=${region}`
         );
+        setLoading(true);
         setData(response.data.data[0]);
-        console.log(setData);
       } catch (err) {
         setError(err);
       } finally {
