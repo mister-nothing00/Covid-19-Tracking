@@ -19,12 +19,3 @@ Una web app sviluppata con **React.js** e **Chart.js** per visualizzare e analiz
 - 🎨 **CSS (o framework a scelta)** → Per lo styling dell'applicazione.  
 
 ---
-
-## ⚡ Installazione  
-
-Segui questi passaggi per eseguire l'applicazione in locale:  
-
-1️⃣ **Clona il repository**:  
-
-```bash
-git clone https://github.com/mister-nothing00/Covid-19-Tracking.git
