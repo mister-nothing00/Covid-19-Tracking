@@ -1,37 +1,30 @@
-# COVID-19 Dashboard
+# 🦠 COVID-19 Dashboard  
 
-Una web app sviluppata con **React.js** e **Chart.js** per visualizzare e analizzare i dati relativi al COVID-19. Grazie alla sua interfaccia interattiva, l'app permette agli utenti di filtrare i dati per continente, nazione/provincia, e data, offrendo una visione chiara dell'andamento della pandemia nel tempo.
+Una web app sviluppata con **React.js** e **Chart.js** per visualizzare e analizzare i dati relativi al COVID-19. Grazie alla sua interfaccia interattiva, l'app consente agli utenti di filtrare i dati per **continente, nazione/provincia e data**, offrendo una panoramica chiara dell'andamento della pandemia nel tempo.  
 
-## Funzionalità principali
+---
 
-- **Filtraggio Geografico**: Seleziona il continente e, successivamente, lo stato o la provincia per visualizzare i dati di un’area specifica.
-- **Visualizzazione Grafica**: Grafici interattivi creati con Chart.js per mostrare l'andamento dei casi di COVID-19.
-- **Filtraggio per Data**: Possibilità di selezionare una data specifica per visualizzare i dati del periodo scelto.
+## 🚀 Funzionalità principali  
 
-## Tecnologie utilizzate
+✅ **Filtraggio Geografico**: Seleziona un **continente**, poi uno **stato** o una **provincia** per visualizzare i dati di un’area specifica.  
+📊 **Visualizzazione Grafica**: Grafici interattivi creati con **Chart.js** per mostrare l'andamento dei casi di COVID-19.  
+📅 **Filtraggio per Data**: Possibilità di selezionare una **data specifica** per analizzare il periodo scelto.  
 
-- **React.js**: Framework principale per la costruzione dell'interfaccia utente.
-- **Chart.js**: Libreria per la generazione di grafici interattivi.
-- **CSS** o framework a scelta: Per lo stile dell'app.
+---
 
-## Screenshot
-![COVID-19 Dashboard Screenshot]()
+## 🛠️ Tecnologie utilizzate  
 
-## Installazione
+- ⚛️ **React.js** → Per la costruzione dell'interfaccia utente.  
+- 📊 **Chart.js** → Per la generazione di grafici interattivi.  
+- 🎨 **CSS (o framework a scelta)** → Per lo styling dell'applicazione.  
 
-Per eseguire l'applicazione in locale, segui questi passaggi:
+---
 
-1. **Clona il repository**:
-   ```bash
-   git clone https://github.com/mister-nothing00/Covid-19-Tracking.git
+## ⚡ Installazione  
 
-2. **Passaggio alla cartella**:
+Segui questi passaggi per eseguire l'applicazione in locale:  
 
-cd nome_progetto
+1️⃣ **Clona il repository**:  
 
-3. **Istallazione dipendenze**:
-
-npm install
-
-4. **Avvio del progetto**:
-npm run dev
+```bash
+git clone https://github.com/mister-nothing00/Covid-19-Tracking.git
