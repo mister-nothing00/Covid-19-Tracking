@@ -18,3 +18,14 @@ span {
   font-weight: 400;
   font-style: normal;
 }
+
+
+/* Nascondere la scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

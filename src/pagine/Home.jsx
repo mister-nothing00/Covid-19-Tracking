@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import React from "react";
-import { BiInfoCircle } from "react-icons/bi";
+import { BiLineChart } from "react-icons/bi";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
             color={"blue.900"}
             textAlign={"left"}
           >
-            Dati che Fanno la Differenza
+            Scopri l'Andamento del Covid con i Nostri Grafici Interattivi
           </Heading>
 
           <Box
@@ -50,7 +50,7 @@ export default function Home() {
               color={"blue.700"}
               textAlign={"left"}
             >
-              Chi siamo ?
+              La Nostra Missione
             </Heading>
             <Text
               mt={4}
@@ -64,10 +64,7 @@ export default function Home() {
               lineHeight={"5"}
               color={"gray.400"}
             >
-              Minim incididunt dolor fugiat excepteur consectetur eu nisi
-              cupidatat minim magna. Eu magna amet tempor qui esse. In eu nisi
-              duis adipisicing mollit occaecat. Do commodo anim elit occaecat.
-              Excepteur magna mollit cillum elit.
+              In un periodo di incertezza, la conoscenza è potere. Siamo qui per fornirti dati chiari e affidabili sull'andamento della pandemia di Covid-19. La nostra web app ti permette di visualizzare grafici interattivi sempre aggiornati, per comprendere meglio l'evoluzione del virus nel tempo.
             </Text>
           </Box>
           <Box
@@ -87,7 +84,7 @@ export default function Home() {
               color={"blue.700"}
               textAlign={"left"}
             >
-              Cosa puoi fare ?
+              Esplora i Dati in Modo Semplice
             </Heading>
             <Text
               mt={4}
@@ -101,14 +98,7 @@ export default function Home() {
               lineHeight={"5"}
               color={"gray.400"}
             >
-              Minim incididunt dolor fugiat excepteur consectetur eu nisi
-              cupidatat minim magna. Eu magna amet tempor qui esse. In eu nisi
-              duis adipisicing mollit occaecat. Do commodo anim elit occaecat.
-              Excepteur magna mollit cillum elit.Sit proident nostrud dolor
-              incididunt. Aliquip dolor nulla adipisicing sint tempor do sint.
-              Magna ullamco deserunt dolor dolore officia eu aute sint eiusmod
-              exercitation non duis et excepteur. Culpa sit sint non veniam
-              exercitation ut. Ea veniam fugiat in tempor officia.
+              Con pochi click, potrai accedere a una vasta gamma di grafici interattivi che mostrano l'andamento dei contagi, dei ricoveri e delle vaccinazioni. Puoi filtrare i dati per regione, fascia d'età e periodo temporale. La nostra interfaccia intuitiva ti permetterà di trovare rapidamente le informazioni che cerchi, per essere sempre aggiornato sull'evoluzione della pandemia.
             </Text>
           </Box>
           <Link
@@ -134,7 +124,7 @@ export default function Home() {
                 transition: "all 0.3s ease",
               }}
             >
-              Scopri di più <BiInfoCircle />
+              Esplora i Grafici <BiLineChart />
             </Button>
           </Link>
         </Flex>

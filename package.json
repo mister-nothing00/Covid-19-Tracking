@@ -1,7 +1,25 @@
 {
-  "name": "covid",
+  "name": "covid-19-dashboard-italia",
+  "description": "Una dashboard interattiva per monitorare l'andamento della pandemia di COVID-19 in Italia. Grafici sempre aggiornati su contagi, ricoveri e vaccini per regioni e province.",
+  "keywords": [
+    "COVID-19",
+    "Italia",
+    "dashboard",
+    "coronavirus",
+    "dati pandemia",
+    "contagi regioni",
+    "ricoveri province",
+    "vaccinazioni",
+    "grafici interattivi",
+    "React",
+    "Chart.js",
+    "dati in tempo reale",
+    "monitoraggio pandemia"
+  ],
+  "author": "Francesco Davide di Vita",
+
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -7,6 +7,7 @@ import {
   ListItem,
   Select,
   Text,
+  Heading
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Info from "./Info";
@@ -20,10 +21,10 @@ export default function Province() {
   const [provinceList, setProvinceList] = useState([]);
 
   // Funzione per recuperare le province
-  const fetchProvinces = async (region) => {
+  const fetchProvinces = async (iso) => {
     try {
       const response = await fetch(
-        `https://covid-api.com/api/provinces/${region}?per_page=52`
+        `https://covid-api.com/api/provinces/${iso}?per_page=52`
       );
       const data = await response.json();
       setProvinceList(data.data);
@@ -32,113 +33,86 @@ export default function Province() {
     }
   };
 
-  // Effetto per chiamare l'API quando la regione cambia
+  // Effetto per chiamare l'API quando l'ISO cambia
   useEffect(() => {
     if (iso) {
       fetchProvinces(iso);
+      setRegion(iso === "CHN" ? "CHINA" : "US");
     } else {
       setProvinceList([]);
+      setRegion("");
     }
   }, [iso]);
 
   return (
     <>
       <form onSubmit={(e) => e.preventDefault()}>
-        <Box
-          display="flex"
-          flexDir={"column"}
-          alignItems={"flex-start"}
-          mt={16}
-        >
-          <Text
-            borderLeft={"3px solid"}
-            borderColor={"blue.900"}
+        <Box mt={16}>
+          <Heading
+            borderLeft={"4px solid"}
+            borderColor={"blue.600"}
             fontFamily={"Montserrat"}
             fontSize={"2xl"}
-            fontWeight={"medium"}
-            letterSpacing={0.5}
-            color={"blue.700"}
-            ps={2}
-            ms={2}
+            fontWeight={"bold"}
+            color={"blue.800"}
+            ps={4}
+            mb={6}
           >
-            Cerca per provincia
-          </Text>
+            Scopri i Dati Provinciali
+          </Heading>
           <Text
             fontFamily={"Lora"}
-            fontStyle={"italic"}
-            fontSize={{ base: "xs", md: "sm" }}
-            color={"gray.400"}
-            my={5}
-            ms={6}
+            fontSize={{ base: "md", md: "lg" }}
+            color={"gray.600"}
+            mb={8}
+            ps={4}
           >
-            <List
-              display={"flex"}
-              flexDir={"column"}
-              alignItems={"flex-start"}
-              gap={4}
-              lineHeight={"4"}
-            >
-              <ListItem lineHeight={"5"}>
-                <ListIcon as={MdCheckCircle} />
-                <b>Primo e Secondo Campo </b>: Questi due campi permettono all'utente di
-                selezionare un continente. Entrambi i campi devono riportare lo
-                stesso continente per assicurare una selezione coerente.
-              </ListItem>
-              <ListItem lineHeight={"5"}>
-                <ListIcon as={MdCheckCircle} />
-                <b>Terzo Campo </b>: Una volta scelto il continente, l’utente può
-                selezionare una provincia specifica all'interno di uno stato o
-                di una nazione del continente scelto. Questo passaggio permette
-                di focalizzare ulteriormente la ricerca.
-              </ListItem>
-              <ListItem lineHeight={"5"}>
-                <ListIcon as={MdCheckCircle} />
-                <b>Data </b>: Infine, l’utente può selezionare una data per filtrare le
-                informazioni basate sul periodo desiderato.
-              </ListItem>
-            </List>
+            Segui questi passaggi per accedere a informazioni dettagliate sull'andamento del Covid-19 a livello provinciale:
           </Text>
+          <List spacing={6} ps={4} mb={12} color={"gray.600"} fontFamily={"Lora"} fontSize={{ base: "md", md: "lg" }}>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color={"green.500"} />
+              <b>Seleziona il Paese</b> dal primo menu a tendina per specificare l'area geografica di tuo interesse.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color={"green.500"} />
+              <b>Scegli la Provincia</b> dal secondo menu a tendina per restringere ulteriormente la tua ricerca.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color={"green.500"} />
+              <b>Indica la Data</b> che ti interessa per visualizzare i dati relativi a quel periodo specifico.
+            </ListItem>
+          </List>
         </Box>
 
         <Flex
           flexDir={{ base: "column", md: "row" }}
           justifyContent={"space-between"}
           alignItems={"center"}
-          width={"90%"}
+          width={"100%"}
           mx={"auto"}
           gap={8}
-          my={16}
         >
           <Select
-            placeholder="Seleziona un'opzione"
-            width={{ base: "100%", md: " 100%" }}
-            size={"sm"}
-            borderRadius={"16px"}
+            placeholder="Seleziona un Paese"
+            width={{ base: "100%", md: "100%" }}
+            size={"lg"}
+            borderRadius={"full"}
             value={iso}
             onChange={(e) => setIso(e.target.value)}
           >
-            <option value="CHN">CHN</option>
-            <option value="USA">USA</option>
-          </Select>
-          <Select
-            placeholder="Seleziona un'opzione"
-            width={{ base: "100%", md: " 100%" }}
-            size={"sm"}
-            borderRadius={"16px"}
-            value={region}
-            onChange={(e) => setRegion(e.target.value)}
-          >
-            <option value="CHINA">CHINA</option>
-            <option value="US">US</option>
+            <option value="CHN">Cina</option>
+            <option value="USA">Stati Uniti</option>
           </Select>
 
           <Select
-            placeholder="Seleziona una provincia"
+            placeholder="Seleziona una Provincia"
             width={"100%"}
-            size={"sm"}
-            borderRadius={"16px"}
+            size={"lg"}
+            borderRadius={"full"}
             value={province}
             onChange={(e) => setProvince(e.target.value)}
+            isDisabled={!provinceList.length}
           >
             {provinceList.map((prov, index) => (
               <option key={index} value={prov.province}>
@@ -150,8 +124,8 @@ export default function Province() {
           <Input
             type="date"
             width={"100%"}
-            size={"sm"}
-            borderRadius={"16px"}
+            size={"lg"}
+            borderRadius={"full"}
             onChange={(e) => setDate(e.target.value)}
           />
         </Flex>

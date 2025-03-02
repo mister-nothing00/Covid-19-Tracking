@@ -7,7 +7,7 @@ import {
   ListItem,
   Select,
   Text,
-  UnorderedList,
+  Heading
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Risultati from "./Risultati";
@@ -28,95 +28,86 @@ export default function Nazione({ onFormSubmit }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Text
-          borderLeft={"3px solid"}
-          borderColor={"blue.900"}
+        <Heading
+          borderLeft={"4px solid"}
+          borderColor={"blue.600"}
           fontFamily={"Montserrat"}
           fontSize={{ base: "2xl", md: "3xl" }}
-          fontWeight={"medium"}
+          fontWeight={"bold"}
           letterSpacing={0.5}
-          color={"blue.700"}
+          color={"blue.800"}
           mt={"40px"}
           mb={"20px"}
-          ps={1}
-          ms={0}
+          ps={4}
         >
-          Cerca per nazione
-        </Text>
+          Esplora i Dati per Nazione
+        </Heading>
         <Text
           fontFamily={"Lora"}
-          fontStyle={"italic"}
-          fontSize={{ base: "xs", md: "sm" }}
-          color={"gray.400"}
-          ms={1}
+          fontSize={{ base: "md", md: "lg" }}
+          color={"gray.600"}
+          mb={8}
+          ps={4}
         >
-          <List
-            display={"flex"}
-            flexDir={"column"}
-            alignItems={"flex-start"}
-            gap={4}
-            ps={2}
-            lineHeight={"4"}
-          >
-            <ListItem lineHeight={"5"}>
-              <ListIcon as={MdCheckCircle} color={"blue.600"} />
-              <b>Inserisci</b> una data nel primo campo: scegli il giorno, il
-              mese e l’anno per il periodo di cui vuoi visualizzare i dati.
-            </ListItem>
-            <ListItem lineHeight={"5"}>
-              <ListIcon as={MdCheckCircle} color={"blue.600"} />
-              <b>Seleziona</b> un’opzione dal secondo campo: scegli tra le
-              opzioni disponibili per specificare ulteriormente il tipo di dati
-              da visualizzare.
-            </ListItem>
-            <ListItem lineHeight={"5"}>
-              <ListIcon as={MdCheckCircle} color={"blue.600"} />
-              <b>Visualizza</b> i risultati: una volta selezionata la data e
-              l’opzione, verranno mostrati i dati aggiornati e pertinenti a quel
-              periodo e all’opzione selezionata, così potrai monitorare
-              l’andamento specifico in base alle tue preferenze di ricerca.
-            </ListItem>
-          </List>
+          Segui questi semplici passaggi per accedere a grafici dettagliati sull'andamento del Covid-19 nel Paese che ti interessa:
         </Text>
+        <List
+          spacing={6}
+          ps={4}
+          mb={12}
+          color={"gray.600"}
+          fontFamily={"Lora"}
+          fontSize={{ base: "md", md: "lg" }}
+        >
+          <ListItem>
+            <ListIcon as={MdCheckCircle} color={"green.500"} />
+            <b>Scegli la data</b> che ti interessa dal calendario per selezionare il periodo su cui vuoi indagare.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} color={"green.500"} />
+            <b>Seleziona il Paese</b> dal menu a tendina per specificare l'area geografica di tuo interesse.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} color={"green.500"} />
+            <b>Ottieni subito i risultati</b>: in pochi istanti, potrai visualizzare grafici chiari e sempre aggiornati sull'evoluzione della pandemia nel Paese e nel periodo che hai selezionato.
+          </ListItem>
+        </List>
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}
           width={"100%"}
           mx={"auto"}
           gap={8}
-          mt={16}
         >
           <Input
             type="date"
             width={"100%"}
-            size={"sm"}
-            borderRadius={"16px"}
+            size={"lg"}
+            borderRadius={"full"}
             onChange={(e) => setDate(e.target.value)}
           />
 
           <Select
-            placeholder="Seleziona un opzione"
+            placeholder="Seleziona un Paese"
             width={"100%"}
-            size={"sm"}
-            borderRadius={"16px"}
+            size={"lg"}  
+            borderRadius={"full"}
             onChange={(e) => setRegion(e.target.value)}
             value={region}
           >
-            <option value="CHINA">CHN</option>
-            <option value="US">USA</option>
+            <option value="CHINA">Cina</option>
+            <option value="US">Stati Uniti</option>
           </Select>
         </Flex>
 
         <Divider
-          mt={10}
+          mt={16}
           borderBottom={"2px solid"}
-          borderColor={"gray.400 "}
+          borderColor={"gray.200"}
           width={"100%"}
           mx={"auto"}
-          opacity={"0.1"}
         />
       </form>
-      {/* Passaggio delle props: date & region */}
       <Risultati date={date} region={region} />
     </>
   );
