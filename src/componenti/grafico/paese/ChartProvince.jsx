@@ -3,12 +3,12 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
-// Registra tutti i componenti necessari
+
 Chart.register(...registerables);
 
 export default function ChartProvince({ covidData, date }) {
 
-  // Controllo dei dati
+
   if (!covidData || covidData.length === 0) {
     return (
       <Text
@@ -23,15 +23,15 @@ export default function ChartProvince({ covidData, date }) {
         borderColor={"blue.700"}
         ps={2}
       >
-        Nessun dato disponibile per il grafico e dettagli.
+        No data available for graph and details.
       </Text>
     );
   }
 
-  // Prendi l'ultimo report COVID-19
+  
   const latestData = covidData[covidData.length - 1];
 
-  // Configurazione dei dati per il grafico
+ 
   const chartData = {
     labels: ["Confermati", "Decessi", "Guariti", "Attivi"],
     datasets: [
@@ -60,7 +60,7 @@ export default function ChartProvince({ covidData, date }) {
     ],
   };
 
-  // Opzioni del grafico
+
   const options = {
     scales: {
       y: {
@@ -74,7 +74,7 @@ export default function ChartProvince({ covidData, date }) {
       },
       title: {
         display: true,
-        text: "Confronto Dati COVID-19",
+        text: "COVID-19 Data Comparison",
       },
     },
   };
@@ -92,7 +92,7 @@ export default function ChartProvince({ covidData, date }) {
         ps={2}
         mx={"auto"}
       >
-        Grafico
+        Graphic
         <Text
           ms={1}
           mb={20}

@@ -13,7 +13,7 @@ export default function Info({ date, iso, region, province }) {
         mt={20}
         
       >
-        Risultati
+        Results
       </Heading>
       <Box
         display={"flex"}
@@ -25,22 +25,14 @@ export default function Info({ date, iso, region, province }) {
         my={20}
         
       >
-        <Text
-          color={"blue.700"}
-          fontFamily={"Lora"}
-          fontSize={"sm"}
-          fontWeight={"normal"}
-         
-        >
-          <b>ISO</b>: {iso}
-        </Text>
+       
         <Text
           color={"blue.700"}
           fontFamily={"Lora"}
           fontSize={"sm"}
           fontWeight={"normal"}
         >
-          <b>Stato</b>: {region}
+          <b>State</b>: {region}
         </Text>
         <Text
            color={"blue.700"}
@@ -48,7 +40,7 @@ export default function Info({ date, iso, region, province }) {
            fontSize={"sm"}
            fontWeight={"normal"}
         >
-          <b>Provincia</b>: {province}
+          <b>Province</b>: {province}
         </Text>
         <Text
           color={"blue.700"}

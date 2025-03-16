@@ -8,7 +8,7 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Assicurati di importare axios
+import axios from "axios"; 
 import ChartProvince from "./ChartProvince";
 
 export default function GraficoProvince({ date, iso, region, province }) {
@@ -28,14 +28,14 @@ export default function GraficoProvince({ date, iso, region, province }) {
         const response = await axios.get(url);
         const data = response.data;
 
-        // Assicurati che ci siano dati
+       
         if (data && data.data) {
           setCovidData(data.data);
         } else {
-          setError("Nessun dato trovato.");
+          setError("No data found.");
         }
       } catch (error) {
-        setError("Errore nel recupero dei dati: " + error.message);
+        setError("Error retrieving data: " + error.message);
       } finally {
         setLoading(false);
       }
@@ -66,7 +66,7 @@ export default function GraficoProvince({ date, iso, region, province }) {
             fontWeight={"semibold"}
             color={"blue.600"}
           >
-            Dettagli COVID-19
+           COVID-19 Details
           </CardHeader>
           <Divider
             mb={4}

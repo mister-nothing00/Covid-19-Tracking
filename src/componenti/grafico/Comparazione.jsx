@@ -3,17 +3,17 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
-// Registra tutti i componenti necessari
+// Registrazione componenti necessari
 Chart.register(...registerables);
 
 export default function Comparazione({ date, data }) {
   if (!data) {
-    return <Text>Nessun dato disponibile per il grafico.</Text>;
+    return <Text>No data available for the graph.</Text>;
   }
 
-  // Configurazione dei dati per il grafico
+  // Configurazione dati per il grafico
   const chartData = {
-    labels: ["Confermati", "Decessi", "Guariti", "Attivi"],
+    labels: ["Confirmed", "Deaths", "Get well", "Active"],
     datasets: [
       {
         label: "Dati COVID-19",
@@ -68,7 +68,7 @@ export default function Comparazione({ date, data }) {
           Data : {date}
         </Text>
       </Text>
-      <Box display={"block"} width={{base:"100%",md:"100%"}} mx={"auto"}>
+      <Box display={"block"} width={{ base: "100%", md: "100%" }} mx={"auto"}>
         <Bar data={chartData} options={options} />
       </Box>
     </>

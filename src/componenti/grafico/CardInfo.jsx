@@ -63,7 +63,7 @@ export default function CardInfo({ date, region }) {
           mx={{ base: "auto", md: "auto" }}
         >
           <CardBody textAlign={"center"}>
-            <Alert status="error">Errore nel caricamento dei dati.</Alert>
+            <Alert status="error">Error loading data.</Alert>
           </CardBody>
         </Card>
       </Box>
@@ -81,7 +81,7 @@ export default function CardInfo({ date, region }) {
         >
           <CardBody textAlign={"center"}>
             <Text fontFamily={"Montserrat"} color={"gray.400"}>
-              Nessun dato disponibile per la data selezionata.
+              No data available for the selected date
             </Text>
           </CardBody>
         </Card>
@@ -111,7 +111,7 @@ export default function CardInfo({ date, region }) {
             fontWeight={"semibold"}
             color={"blue.600"}
           >
-            Dettagli COVID-19
+            COVID-19 Details
           </CardHeader>
           <Divider
             mb={4}
@@ -126,23 +126,23 @@ export default function CardInfo({ date, region }) {
               <strong>Data:</strong> {data.date}
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Confermati:</strong> {data.confirmed}
+              <strong>Confirmed:</strong> {data.confirmed}
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Decessi:</strong> {data.deaths}
+              <strong>Deaths:</strong> {data.deaths}
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Guariti:</strong> {data.recovered}
+              <strong>Get well:</strong> {data.recovered}
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Attivi:</strong> {data.active}
+              <strong>Active:</strong> {data.active}
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Fattore di mortalità:</strong>{" "}
+              <strong>Mortality factor:</strong>{" "}
               {(data.fatality_rate * 100).toFixed(2)}%
             </Text>
             <Text fontStyle={"italic"}>
-              <strong>Ultimo aggiornamento:</strong> {data.last_update}
+              <strong>Latest update:</strong> {data.last_update}
             </Text>
           </CardBody>
         </Card>

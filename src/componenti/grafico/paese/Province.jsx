@@ -7,7 +7,7 @@ import {
   ListItem,
   Select,
   Text,
-  Heading
+  Heading,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Info from "./Info";
@@ -33,7 +33,7 @@ export default function Province() {
     }
   };
 
-  // Effetto per chiamare l'API quando l'ISO cambia
+ 
   useEffect(() => {
     if (iso) {
       fetchProvinces(iso);
@@ -58,7 +58,7 @@ export default function Province() {
             ps={4}
             mb={6}
           >
-            Scopri i Dati Provinciali
+            Discover the Provincial Data
           </Heading>
           <Text
             fontFamily={"Lora"}
@@ -67,20 +67,31 @@ export default function Province() {
             mb={8}
             ps={4}
           >
-            Segui questi passaggi per accedere a informazioni dettagliate sull'andamento del Covid-19 a livello provinciale:
+            Follow these steps to access detailed information on the progress of
+            Covid-19 at the provincial level:{" "}
           </Text>
-          <List spacing={6} ps={4} mb={12} color={"gray.600"} fontFamily={"Lora"} fontSize={{ base: "md", md: "lg" }}>
+          <List
+            spacing={6}
+            ps={4}
+            mb={12}
+            color={"gray.600"}
+            fontFamily={"Lora"}
+            fontSize={{ base: "md", md: "lg" }}
+          >
             <ListItem>
               <ListIcon as={MdCheckCircle} color={"green.500"} />
-              <b>Seleziona il Paese</b> dal primo menu a tendina per specificare l'area geografica di tuo interesse.
+              <b>Select Country</b> from the first drop-down menu to specify the
+              geographical area of ​​your interest.
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color={"green.500"} />
-              <b>Scegli la Provincia</b> dal secondo menu a tendina per restringere ulteriormente la tua ricerca.
+              <b>Choose the Province</b> from the second drop-down menu to
+              further narrow your search.
             </ListItem>
             <ListItem>
               <ListIcon as={MdCheckCircle} color={"green.500"} />
-              <b>Indica la Data</b> che ti interessa per visualizzare i dati relativi a quel periodo specifico.
+              <b>Indicate the Date</b> you are interested in to view the data
+              relating to that specific period.
             </ListItem>
           </List>
         </Box>
@@ -94,7 +105,7 @@ export default function Province() {
           gap={8}
         >
           <Select
-            placeholder="Seleziona un Paese"
+            placeholder="Select a country"
             width={{ base: "100%", md: "100%" }}
             size={"lg"}
             borderRadius={"full"}
@@ -102,11 +113,11 @@ export default function Province() {
             onChange={(e) => setIso(e.target.value)}
           >
             <option value="CHN">Cina</option>
-            <option value="USA">Stati Uniti</option>
+            <option value="USA">United States</option>
           </Select>
 
           <Select
-            placeholder="Seleziona una Provincia"
+            placeholder="Select a Province"
             width={"100%"}
             size={"lg"}
             borderRadius={"full"}

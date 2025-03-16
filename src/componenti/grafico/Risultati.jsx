@@ -13,7 +13,7 @@ export default function Risultati({ date, region }) {
         textAlign={"center"}
         mt={"60px"}
       >
-        Risultati
+        Results
       </Heading>
       <Box
         display={"flex"}

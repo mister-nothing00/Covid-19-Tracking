@@ -12,22 +12,34 @@ export default function Hero() {
         color={"blue.900"}
         mb={4}
       >
-        Tieni Sotto Controllo la Pandemia con i Nostri Grafici Interattivi
+        Keep Track of the Pandemic with Our Interactive Charts
       </Heading>
       <Text
         color={"gray.600"}
-        width={{base:"100%", md:"80%"}}
+        width={{ base: "100%", md: "80%" }}
         mt={4}
         fontFamily={"Lora"}
         fontSize={{ base: "md", md: "lg" }}
         lineHeight={"7"}
         letterSpacing={0.5}
       >
-        La nostra innovativa web app ti permette di monitorare l'evoluzione del Covid-19 negli Stati Uniti in modo semplice e intuitivo. Basta inserire il nome di uno stato o di una contea nel campo di ricerca e selezionare un intervallo di date per accedere a grafici dettagliati e sempre aggiornati.
-        <br /><br />
-        In pochi click, potrai visualizzare l'andamento dei contagi, dei ricoveri e di altri indicatori chiave nella zona di tuo interesse. Avrai a portata di mano tutte le informazioni necessarie per comprendere la situazione epidemiologica locale e prendere decisioni consapevoli per proteggere te stesso e i tuoi cari.
-        <br /><br />
-        Che tu sia un cittadino preoccupato, un operatore sanitario o un decisore pubblico, la nostra app ti fornirà i dati di cui hai bisogno in modo chiaro e tempestivo. Unisciti alle migliaia di persone che già si affidano a noi per restare informate sulla pandemia.
+        Our innovative web app lets you monitor the evolution of Covid-19 in the
+        United States in a simple and intuitive way. Simply enter the name of a
+        state or county in the search field and select a date range to access
+        detailed and always up-to-date graphs.
+        <br />
+        <br />
+        In just a few clicks, you can view the trend of infections,
+        hospitalizations and other key indicators in the area of ​​​​your
+        interest. You will have all the information you need at your fingertips
+        to understand the local epidemiological situation and make informed
+        decisions to protect yourself and your loved ones.
+        <br />
+        <br />
+        Whether you are a concerned citizen, a healthcare worker or a public
+        decision-maker, our app will provide you with the data you need in a
+        clear and timely way. Join the thousands of people who already rely on
+        us to stay informed about the pandemic.
       </Text>
       <Divider
         mt={8}

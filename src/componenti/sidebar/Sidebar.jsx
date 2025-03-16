@@ -15,7 +15,8 @@ export default function Sidebar() {
       bottom={0}
       px={2}
       width={"80px"}
-      height={"100vh"}
+      height={"auto"}
+      maxHeight={"100vh"}
       mx={"0px"}
     >
       <Flex

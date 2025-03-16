@@ -7,7 +7,7 @@ import {
   ListItem,
   Select,
   Text,
-  Heading
+  Heading,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Risultati from "./Risultati";
@@ -40,7 +40,7 @@ export default function Nazione({ onFormSubmit }) {
           mb={"20px"}
           ps={4}
         >
-          Esplora i Dati per Nazione
+          Explore Data by Country
         </Heading>
         <Text
           fontFamily={"Lora"}
@@ -49,7 +49,8 @@ export default function Nazione({ onFormSubmit }) {
           mb={8}
           ps={4}
         >
-          Segui questi semplici passaggi per accedere a grafici dettagliati sull'andamento del Covid-19 nel Paese che ti interessa:
+          Follow these simple steps to access detailed graphs on the progress of
+          Covid-19 in the country you are interested in:{" "}
         </Text>
         <List
           spacing={6}
@@ -61,15 +62,19 @@ export default function Nazione({ onFormSubmit }) {
         >
           <ListItem>
             <ListIcon as={MdCheckCircle} color={"green.500"} />
-            <b>Scegli la data</b> che ti interessa dal calendario per selezionare il periodo su cui vuoi indagare.
+            <b>Choose the date</b> you are interested in from the calendar to
+            select the period you want to investigate.{" "}
           </ListItem>
           <ListItem>
             <ListIcon as={MdCheckCircle} color={"green.500"} />
-            <b>Seleziona il Paese</b> dal menu a tendina per specificare l'area geografica di tuo interesse.
+            <b>Select Country</b> from the drop-down menu to specify the
+            geographic area of ​​your interest.{" "}
           </ListItem>
           <ListItem>
             <ListIcon as={MdCheckCircle} color={"green.500"} />
-            <b>Ottieni subito i risultati</b>: in pochi istanti, potrai visualizzare grafici chiari e sempre aggiornati sull'evoluzione della pandemia nel Paese e nel periodo che hai selezionato.
+            <b>Get results right away</b>: in just a few moments, you will be
+            able to view clear and constantly updated graphs on the evolution of
+            the pandemic in the country and in the period you have selected.{" "}
           </ListItem>
         </List>
         <Flex
@@ -88,9 +93,9 @@ export default function Nazione({ onFormSubmit }) {
           />
 
           <Select
-            placeholder="Seleziona un Paese"
+            placeholder="Select a country"
             width={"100%"}
-            size={"lg"}  
+            size={"lg"}
             borderRadius={"full"}
             onChange={(e) => setRegion(e.target.value)}
             value={region}
