@@ -78,6 +78,7 @@ export default function Nazione({ onFormSubmit }) {
           </ListItem>
         </List>
         <Flex
+        flexDirection={{base:"column", md:"row"}}
           justifyContent={"space-between"}
           alignItems={"center"}
           width={"100%"}

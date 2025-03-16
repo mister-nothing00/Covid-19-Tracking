@@ -5,61 +5,24 @@ import {
   Heading,
   Link,
   Text,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { BiLineChart } from "react-icons/bi";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Home() {
+  const maxWidth = "1440px";
   
-  const headingSize = useBreakpointValue({
-    base: "4xl",
-    sm: "5xl",
-    md: "6xl",
-    lg: "7xl",
-    xl: "8xl",
-  });
 
-  const subheadingSize = useBreakpointValue({
-    base: "xl",
-    sm: "2xl",
-    md: "3xl",
-  });
-
-  const paragraphSize = useBreakpointValue({
-    base: "xs",
-    sm: "sm",
-    md: "md",
-  });
-
-  const paragraphWidth = useBreakpointValue({
-    base: "95%",
-    sm: "90%",
-    md: "70%",
-    lg: "50%",
-  });
-
-  const buttonSize = useBreakpointValue({
-    base: "sm",
-    md: "md",
-    lg: "lg",
-  });
-
-  const sidePadding = useBreakpointValue({
-    base: "20px",
-    sm: "30px",
-    md: "60px",
-    lg: "80px",
-  });
 
   return (
     <>
       <Box
         width="100%"
+        maxWidth={"1440px"}
         height="100vh"
         maxHeight="100vh"
-        mx="auto"
+        mx={maxWidth ? "0px" : "auto"}
         bg="gray.50"
         bgGradient="linear(190deg, gray.50, gray.100)"
       >
@@ -71,16 +34,17 @@ export default function Home() {
           width="100%"
           height="90vh"
           overflowY="auto"
-          py={{ base: "40px", md: "60px" }}
-          px={sidePadding}
+          py={{ base: "30px" }}
+          px={{ base: "20px" }}
         >
           <Heading
             fontFamily="Montserrat"
             fontWeight="bold"
-            fontSize={headingSize}
+            fontSize={{ base: "3xl", md: "6xl", lg: "7xl" }}
             color="blue.900"
             textAlign={{ base: "center", md: "left" }}
             lineHeight="1.2"
+            width={"100%"}
             maxWidth={{ base: "100%", lg: "90%" }}
           >
             Discover the Trend of Covid with Our Interactive Graphs
@@ -100,7 +64,7 @@ export default function Home() {
             <Heading
               fontFamily="Montserrat"
               fontStyle="normal"
-              fontSize={subheadingSize}
+              fontSize={{ base: "xl", md: "3xl" }}
               color="blue.700"
               textAlign={{ base: "center", sm: "left" }}
               mb={{ base: 3, md: 4 }}
@@ -110,10 +74,10 @@ export default function Home() {
             <Text
               fontFamily="Lora"
               fontStyle="italic"
-              fontSize={paragraphSize}
-              width={paragraphWidth}
+              fontSize={{ base: "xs", md: "sm" }}
+              width={{ base: "100%" }}
               mx={{ base: "auto", sm: "0" }}
-              textAlign={{ base: "center", sm: "left" }}
+              textAlign={{ base: "center", md: "left" }}
               letterSpacing="0.5px"
               lineHeight={{ base: "1.6", md: "1.8" }}
               color="gray.500"
@@ -140,7 +104,7 @@ export default function Home() {
             <Heading
               fontFamily="Montserrat"
               fontStyle="normal"
-              fontSize={subheadingSize}
+              fontSize={{ base: "xl", md: "3xl" }}
               color="blue.700"
               textAlign={{ base: "center", sm: "left" }}
               mb={{ base: 3, md: 4 }}
@@ -150,10 +114,10 @@ export default function Home() {
             <Text
               fontFamily="Lora"
               fontStyle="italic"
-              fontSize={paragraphSize}
-              width={paragraphWidth}
+              fontSize={{ base: "xs", md: "sm" }}
+              width={{ base: "100%" }}
               mx={{ base: "auto", sm: "0" }}
-              textAlign={{ base: "center", sm: "left" }}
+              textAlign={{ base: "center", md: "left" }}
               letterSpacing="0.5px"
               lineHeight={{ base: "1.6", md: "1.8" }}
               color="gray.500"
@@ -177,7 +141,7 @@ export default function Home() {
             <Button
               bg="blue.800"
               color="whiteAlpha.900"
-              size={buttonSize}
+              size={{ base: "sm", md: "md", lg: "lg" }}
               py={{ base: 2, md: 3 }}
               px={{ base: 4, md: 6 }}
               transition="all 0.3s ease-in-out"

@@ -5,6 +5,7 @@ import Hero from "../componenti/grafico/Hero";
 import Province from "../componenti/grafico/paese/Province";
 
 export default function Grafico() {
+  const maxWidth = "1440px";
   return (
     <>
       <Flex
@@ -14,12 +15,13 @@ export default function Grafico() {
         alignItems={"flex-start"}
         gap={8}
         height={"100vh"}
-        py={"60px"}
+        py={"30px"}
         width={"100%"}
-        mx={"auto"}
+        maxWidth={"1440px"}
+        mx={maxWidth ? "0px" : "auto"}
         overflowY={"auto"}
       >
-        <Box width={"90%"} height={"auto"} mx={"auto"}>
+        <Box width={"100%"} height={"auto"} mx={"auto"} px={{ base: "20px" }}>
           <Hero />
           <Nazione />
           <Divider

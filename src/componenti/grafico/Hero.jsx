@@ -19,9 +19,8 @@ export default function Hero() {
         width={{ base: "100%", md: "80%" }}
         mt={4}
         fontFamily={"Lora"}
-        fontSize={{ base: "md", md: "lg" }}
-        lineHeight={"7"}
-        letterSpacing={0.5}
+        fontSize={{ base: "xs", xl: "md" }}
+        lineHeight={"5"}
       >
         Our innovative web app lets you monitor the evolution of Covid-19 in the
         United States in a simple and intuitive way. Simply enter the name of a
